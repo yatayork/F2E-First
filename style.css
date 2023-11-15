@@ -5,6 +5,7 @@
   transition: all 0.2s;
   font-family: "Inter", serif;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -135,6 +136,19 @@ nav a {
   width: 8rem;
 }
 
+.h2_title {
+  text-align: center;
+  background: var(--Gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: ManTou;
+  color: transparent;
+  line-height: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
 .mainTitle {
   margin: auto;
 }
@@ -235,17 +249,6 @@ nav a {
   font-size: 1rem;
   font-weight: 700;
 }
-.advocate-content h2 {
-  background: var(--Gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: ManTou;
-  color: transparent;
-  line-height: 100%;
-  text-align: center;
-  font-size: 4rem;
-}
 .advocate-content h3 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -274,28 +277,17 @@ nav a {
   font-size: 1rem;
   font-weight: 700;
 }
-.event h2 {
-  text-align: center;
-  background: var(--Gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: ManTou;
-  color: transparent;
-  line-height: 100%;
-  text-align: center;
-  font-size: 4rem;
-}
 
 .events {
   display: flex;
-  border: 1px solid;
 }
-.events .top_event,
-.events .other_event {
-  border: 1px solid;
-  text-decoration: none;
+.events .top_event {
   width: 50%;
+}
+.events .other_event {
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
 }
 .events .timestamp {
   font-size: 0.875rem;
@@ -309,6 +301,21 @@ nav a {
 .events .other_event-title {
   font-size: 1rem;
 }
+.events .event_button {
+  display: flex;
+  align-items: center;
+  border-radius: 31.25rem;
+  border: 1px solid var(--default-white, #fff);
+  background: var(--gray-100, #f1f5f9);
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  align-items: center;
+  color: var(--Text-primary-700);
+  font-weight: 600;
+}
+.events .event_button::after {
+  align-items: center;
+  content: url(/assests/icon/arrow_forward_FILL0_wght400_GRAD0_opsz24.png);
+}
 
 .advocate-img {
   width: 50%;
@@ -319,6 +326,56 @@ nav a {
 
 .important-text {
   color: var(--Primary);
+}
+
+.issues {
+  display: block;
+}
+.issues h4 {
+  margin: 0rem 45.625% 0rem 45.625%;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--Text-primary-700);
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  background: var(--bg-2);
+  background-size: cover;
+  display: flex;
+  border: 1px solid;
+  padding: 4rem 0rem;
+  justify-content: center;
+}
+.footer div {
+  width: 35%;
+}
+
+.footer_title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--Primary);
+}
+.footer_title::before {
+  content: "3";
+  background-color: var(--Primary);
+  color: #fff;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border-radius: 14.71rem;
+  margin-right: 0.5rem;
+}
+
+.center-info h3 {
+  color: var(--Text-primary-700);
+  font-weight: 700;
+}
+.center-info a {
+  color: var(--Text-primary-700);
 }
 @keyframes baloon_1 {
   0% {
